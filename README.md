@@ -5,7 +5,6 @@ Each demo visualises a specific attack or defense concept — no slides, no theo
 
 **Zero external dependencies.** Everything uses Python's standard library.
 
----
 
 ## Project Structure
 
@@ -22,7 +21,6 @@ crypto-project/
     └── dashboard/                  # Demo 5 — defense techniques
 ```
 
----
 
 ## Requirements
 
@@ -43,7 +41,6 @@ sudo pacman -S tk
 
 No `pip install` needed. All modules (`secrets`, `hashlib`, `random`, `math`, `threading`) are stdlib.
 
----
 
 ## Running the Demos
 
@@ -64,7 +61,6 @@ Opens **3 windows**: Sender · Receiver · Attacker
 | Receiver | Click **RECEIVE & VERIFY** → all fields match |
 | Attacker | Click **INTERCEPT & ATTACK** → seed cracked in milliseconds |
 
----
 
 ### Demo 2 — Randomness Visualizer
 > Three independent instances generate a random walk from the same seed. They always produce an identical path.
@@ -83,7 +79,6 @@ Opens **4 windows**: Control panel + 3 walk windows (Instance A / B / C)
 | 4 | Click **ANIMATE** on any window to watch it draw step-by-step |
 | 5 | Change seed → broadcast again - completely different but still identical across all three |
 
----
 
 ### Demo 3 — PRNG vs CSPRNG (Sequence Prediction)
 > After observing 10 PRNG outputs, an attacker can predict every future value exactly.
@@ -105,7 +100,6 @@ Opens **2 windows**: Generator · Predictor
 1. In Generator, switch mode to **CSPRNG (secrets)**
 2. Predictor's best guess is always - Wrong - no pattern to exploit
 
----
 
 ### Demo 4 - Seed-based Image Generator
 > Same seed - identical Perlin noise image. Attacker brute-forces the seed from a fingerprint.
@@ -123,7 +117,6 @@ Opens **2 windows**: Generator · Attacker
 | 3 | Attacker: set range `0 → 200` - click **ATTACK** |
 | 4 | Attacker finds the seed in milliseconds and renders the exact same image |
 
----
 
 ### Demo 5 — Defense Dashboard
 > Three defenses: secure seed generation, salting, and key stretching (PBKDF2).
@@ -140,7 +133,6 @@ Opens **1 window** with three side-by-side panels:
 | ② Salt + Hashing | Type a password - "Hash ×3 (no salt)" — same hash every run. Then "Hash ×3 (with salt)" — different hash every run from the same password |
 | ③ Key Stretching | Move the slider or use preset buttons (1k / 10k / 100k / 500k). Click **HASH & TIME IT** to see real ms/attempt. Watch the crack-time bar go from "days" to "years" |
 
----
 
 ## Concepts Covered
 
@@ -152,7 +144,6 @@ Opens **1 window** with three side-by-side panels:
 | Image Generator | Seed-to-output mapping | Fingerprint brute-force | Large keyspace |
 | Defense Dashboard | Hardening techniques | — | `os.urandom`, salting, PBKDF2 |
 
----
 
 ## Troubleshooting
 
